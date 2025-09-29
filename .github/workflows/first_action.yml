@@ -1,0 +1,24 @@
+# .github/workflows/hello-world.yml
+name: Hello World Workflow
+
+# Trigger the workflow
+on:
+  push:
+    branches: [ main, cal-jira123 ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Allows manual trigger
+
+# Define the jobs
+jobs:
+  hello-job:
+    name: Say Hello
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Simple echo
+      run: echo "Hello, World!"
+      
