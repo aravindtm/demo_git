@@ -4,7 +4,7 @@ name: Hello World Workflow
 # Trigger the workflow
 on:
   push:
-    branches: [ main, cal-jira123 ]
+    branches: [ main, cal-jera123 ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:  # Allows manual trigger
